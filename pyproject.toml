@@ -1,22 +1,23 @@
-[tool.poetry]
-name = "36120_26sp_group36_25611094_package"
+[project]
+name = "36120-26sp-group36-25611094-package"
 version = "0.1.0"
-description = "Adv ML AT1 package"
-authors = ["Aby"]
-license = "None"
+description = "Add your description here"
 readme = "README.md"
+authors = [
+    { name = "abychopda", email = "abychopda@gmail.com" }
+]
+requires-python = ">=3.13.9"
+dependencies = []
 
-[tool.poetry.dependencies]
-python = "^3.13.9"
-
+[project.scripts]
+36120-26sp-group36-25611094-package = "36120_26sp_group36_25611094_package:main"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
 
-[dependency-groups]
-dev = [
-    "matplotlib>=3.11.1",
-    "pandas>=3.0.5",
-    "seaborn>=0.13.2",
-]
+[[tool.uv.index]]
+name = "testpypi"
+url = "https://test.pypi.org/simple/"
+publish-url = "https://test.pypi.org/legacy/"
+explicit = true
