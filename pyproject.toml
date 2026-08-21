@@ -1,6 +1,6 @@
 [project]
 name = "36120-26sp-group36-25611094-package"
-version = "0.1.0"
+version = "0.1.1"
 description = "Add your description here"
 readme = "README.md"
 authors = [
@@ -10,7 +10,7 @@ requires-python = ">=3.13.9"
 dependencies = []
 
 [project.scripts]
-36120-26sp-group36-25611094-package = "36120_26sp_group36_25611094_package:main"
+36120-26sp-group36-25611094-package = "group36_25611094_package:main"
 
 [build-system]
 requires = ["uv_build>=0.12.0,<0.13.0"]
@@ -21,3 +21,11 @@ name = "testpypi"
 url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
+
+[tool.uv.sources]
+36120-26sp-group36-25611094-package = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "36120-26sp-group36-25611094-package",
+]
