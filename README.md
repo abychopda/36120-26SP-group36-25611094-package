@@ -30,7 +30,7 @@ group36_25611094_package/
 │
 ├── helpers/
 │
-└── __init__.py
+└── All the .py files which have the reuseable functions.
 ```
 
 The `helpers` module contains the reusable functionality used throughout the project.
@@ -67,7 +67,7 @@ This means that the package focuses on general-purpose functionality, while the 
 
 ## Project Context
 
-This package was developed as part of a UTS Master of Data Science and Innovation project involving machine learning experimentation and Kaggle-based model evaluation.
+This package was developed as part of a UTS Master of Data Science and Innovation project for the AMLA subject involving machine learning experimentation and Kaggle-based model evaluation.
 
 It is intended to support reproducible and consistent experimentation across the project.
 
