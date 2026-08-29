@@ -1,25 +1,79 @@
-# 36120_26sp_group36_25611094_package
+# Group 36 Data Science Helper Package
 
-Adv ML AT1 package
+A reusable Python package developed for the UTS Data Science project. The package provides common utilities used across the project's experiment notebooks to support consistent and reproducible data science workflows.
 
-## Installation
+## Package Purpose
 
-```bash
-$ pip install 36120_26sp_group36_25611094_package
+The package was created to centralise reusable data science functionality used across multiple experiments. This reduces repetitive code and allows experiment notebooks to focus on experiment-specific decisions, analysis, and interpretation.
+
+The package is intended to support a clear separation between:
+
+- **Reusable functionality** — maintained within the package.
+- **Experiment-specific decisions** — maintained within the experiment notebooks.
+
+## Features
+
+The package provides reusable utilities supporting:
+
+- Exploratory data analysis
+- Data preprocessing
+- Correlation analysis
+- Machine learning modelling
+- Model evaluation
+- Model visualisation
+- Kaggle submission generation
+
+## Package Structure
+
+```text
+group36_25611094_package/
+│
+├── helpers/
+│
+└── __init__.py
 ```
 
-## Usage
+The `helpers` module contains the reusable functionality used throughout the project.
 
-- TODO
+## Project Workflow
 
-## Contributing
+The package supports the following general workflow:
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+```text
+Data
+  ↓
+Exploratory Analysis
+  ↓
+Preprocessing
+  ↓
+Modelling
+  ↓
+Evaluation
+  ↓
+Visualisation
+  ↓
+Submission
+```
 
-## License
+This structure allows common operations to be reused consistently across different experiments.
 
-`36120_26sp_group36_25611094_package` was created by Aby. Aby retains all rights to the source and it may not be reproduced, distributed, or used to create derivative works.
+## Design Philosophy
 
-## Credits
+The package follows a simple principle:
 
-`36120_26sp_group36_25611094_package` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+> Reusable functionality belongs in the package; experiment-specific decisions remain in the notebooks.
+
+This means that the package focuses on general-purpose functionality, while the experiment notebooks contain the hypotheses, modelling decisions, feature-selection choices, experimental comparisons, and interpretation of results.
+
+## Project Context
+
+This package was developed as part of a UTS Master of Data Science and Innovation project involving machine learning experimentation and Kaggle-based model evaluation.
+
+It is intended to support reproducible and consistent experimentation across the project.
+
+## Authors
+
+**Abhishek Chopda**
+
+**Master of Data Science and Innovation**  
+**University of Technology Sydney (UTS)**
