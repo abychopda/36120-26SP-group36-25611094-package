@@ -1,79 +1,60 @@
-# Group 36 Data Science Helper Package
+# NBA Career ML Toolkit
 
-A reusable Python package developed for the UTS Data Science project. The package provides common utilities used across the project's experiment notebooks to support consistent and reproducible data science workflows.
+A small, reusable Python package that powers the experiments in
+[**nba-career-longevity-prediction**](https://github.com/abychopda/nba-career-longevity-prediction) —
+predicting which college players will last three or more NBA seasons.
 
-## Package Purpose
+It keeps the boilerplate (loading, cleaning, EDA, preprocessing, modelling, evaluation, plotting and
+Kaggle submission files) in one tested place, so each experiment notebook only contains the decisions
+that are specific to that experiment.
 
-The package was created to centralise reusable data science functionality used across multiple experiments. This reduces repetitive code and allows experiment notebooks to focus on experiment-specific decisions, analysis, and interpretation.
+> Reusable functionality belongs in the package; experiment-specific decisions stay in the notebooks.
 
-The package is intended to support a clear separation between:
-
-- **Reusable functionality** — maintained within the package.
-- **Experiment-specific decisions** — maintained within the experiment notebooks.
-
-## Features
-
-The package provides reusable utilities supporting:
-
-- Exploratory data analysis
-- Data preprocessing
-- Correlation analysis
-- Machine learning modelling
-- Model evaluation
-- Model visualisation
-- Kaggle submission generation
-
-## Package Structure
+## What's inside
 
 ```text
-group36_25611094_package/
-│
-├── helpers/
-│
-└── All the .py files which have the reuseable functions.
+src/group36_25611094_package/helpers/
+├── io.py              # dataset loading and saving
+├── cleaning.py        # dataset cleaning utilities
+├── eda.py             # exploratory data analysis summaries
+├── features.py        # feature construction
+├── preprocessing.py   # encoding and transformation
+├── importance.py      # correlation and feature-importance analysis
+├── modeling.py        # model training and evaluation
+├── visualization.py   # plotting utilities
+├── submission.py      # Kaggle submission file generation
+└── utils.py           # shared general-purpose utilities
 ```
 
-The `helpers` module contains the reusable functionality used throughout the project.
-
-## Project Workflow
-
-The package supports the following general workflow:
+## Workflow it supports
 
 ```text
-Data
-  ↓
-Exploratory Analysis
-  ↓
-Preprocessing
-  ↓
-Modelling
-  ↓
-Evaluation
-  ↓
-Visualisation
-  ↓
-Submission
+Data → EDA → Preprocessing → Modelling → Evaluation → Visualisation → Submission
 ```
 
-This structure allows common operations to be reused consistently across different experiments.
+## Installation
 
-## Design Philosophy
+The package is published to TestPyPI under its original distribution name:
 
-The package follows a simple principle:
+```bash
+pip install --index-url https://test.pypi.org/simple/ \
+            --extra-index-url https://pypi.org/simple/ \
+            36120-26sp-group36-25611094-package
+```
 
-> Reusable functionality belongs in the package; experiment-specific decisions remain in the notebooks.
+For local development (uses [uv](https://docs.astral.sh/uv/)):
 
-This means that the package focuses on general-purpose functionality, while the experiment notebooks contain the hypotheses, modelling decisions, feature-selection choices, experimental comparisons, and interpretation of results.
+```bash
+uv sync
+uv build
+```
 
-## Project Context
+## Related
 
-This package was developed as part of a UTS Master of Data Science and Innovation project for the AMLA subject involving machine learning experimentation and Kaggle-based model evaluation.
+- [nba-career-longevity-prediction](https://github.com/abychopda/nba-career-longevity-prediction) — the experiments and results this package supports
+- [mlkit-aby](https://github.com/abychopda/mlkit-aby) — a later, generalised version of this toolkit used in the Sydney Weather Intelligence project
 
-It is intended to support reproducible and consistent experimentation across the project.
+## About
 
-## Authors
-
-**Abhishek Chopda**
-
-**Master of Data Science and Innovation**  
-**University of Technology Sydney (UTS)**
+Written by **Abhishek Chopda** as part of 36120 Advanced Machine Learning Application at the
+University of Technology Sydney (Spring 2026).
